@@ -16,41 +16,57 @@ body {
   line-height: 1.5em;
 }
 
-/* HEADER */
+/* REUSABLE COMPONENTS */
 h1 {
   font-size: 250%;
   font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 4px;
   line-height: 1.7em;
-  margin: 90px 0 0 45px;
+  margin-top: 200px;
+  margin-left: 45px;
   color: rgb(206, 202, 202);
   font-family: 'Nunito', 'Arial', sans-serif;
 }
 
+@media (max-width: 1000px) {
+  h1 {
+    width: 400px;
+  }
+}
+@media (max-width: 723px) {
+  h1 {
+    width: 100%;
+  }
+}
+/* HEADER */
 #header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(img/max-goncharov-iN6FWLaWqKs-unsplash.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
+  width: 100vw;
 }
 
 .header-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100vw;
-  background-attachment: fixed;
 }
 
 #header-img {
   width: 100px;
   margin: 30px 0 0 45px;
+  position: absolute;
 }
+
 /* NAV */
 #nav-bar {
   align-self: center;
-  margin-right: 55px;
+  margin-right: 100px;
+  margin-top: 45px;
 }
 
 #nav-bar li {
@@ -80,4 +96,53 @@ h1 {
 #nav-bar li a:hover,
 #nav-bar li a:active {
   border-bottom: 2px solid #bf2821;
+}
+
+@media (max-width: 720px) {
+  #nav-bar li {
+    display: block;
+  }
+}
+
+/* Section Features */
+#section-features {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh;
+  background: #eee;
+}
+
+.tittle {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.copy {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+  padding: 0 20px;
+}
+
+#video {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  justify-self: center;
+  margin: 10px 20px;
+}
+
+@media (max-width: 569px) {
+  #section-features {
+    display: grid;
+    text-align: center;
+    row-gap: 10px;
+  }
+  .copy {
+    width: 400px;
+  }
 }

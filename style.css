@@ -121,7 +121,7 @@ h1 {
 }
 
 .tittle h2 {
-  padding-top: 30px;
+  padding-top: 50px;
   align-self: center;
 }
 
@@ -150,7 +150,7 @@ h1 {
   grid-row: 3/4;
   justify-self: center;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 #video {

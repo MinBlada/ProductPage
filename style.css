@@ -107,7 +107,7 @@ h1 {
 /* Section Features */
 #section-features {
   display: grid;
-  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-rows: 1fr 1fr 2fr 2fr;
   grid-template-columns: 1fr 2fr 1fr;
   height: 100vh;
   background: rgb(243, 240, 240);
@@ -120,12 +120,13 @@ h1 {
   display: flex;
 }
 
-.tittle h2 {
+h2 {
   padding-top: 50px;
-  align-self: center;
+  text-align: center;
+  overflow: hidden;
 }
 
-.copy {
+.long-copy {
   grid-column: 2/3;
   grid-row: 2/3;
   justify-self: center;
@@ -133,12 +134,12 @@ h1 {
   padding: 0 15%;
 }
 
-.copy p {
+.long-copy p {
   align-self: center;
   font-size: 110%;
 }
 
-.tittle h2::after {
+h2:after {
   display: block;
   content: '';
   border-bottom: 2px solid #bf2821;
@@ -150,9 +151,57 @@ h1 {
   grid-row: 3/4;
   justify-self: center;
   display: flex;
-  margin-bottom: 20px;
 }
 
 #video {
   align-self: center;
+}
+
+/* PLANS */
+
+#works {
+  height: 100vh;
+}
+
+#works p {
+  text-align: center;
+}
+
+.box {
+  background-color: azure;
+  border: 2px solid #000;
+  text-align: center;
+}
+.kit {
+  width: 300px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    '. tittle .'
+    '. sub-tittle .'
+    'box1 box2 box3'
+    'box1 box2 box3';
+  gap: 1em;
+  text-align: center;
+}
+
+.tittle2 {
+  grid-area: tittle;
+}
+
+.copy2 {
+  grid-area: sub-tittle;
+}
+
+.box-1 {
+  grid-area: box1;
+}
+.box-2 {
+  grid-area: box2;
+}
+.box-3 {
+  grid-area: box3;
 }

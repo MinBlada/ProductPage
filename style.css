@@ -95,7 +95,7 @@ h1 {
 
 #nav-bar li a:hover,
 #nav-bar li a:active {
-  border-bottom: 2px solid #bf2821;
+  border-bottom: 2px solid #c23730;
 }
 
 @media (max-width: 720px) {
@@ -111,6 +111,7 @@ h1 {
   grid-template-columns: 1fr 2fr 1fr;
   height: 100vh;
   background: rgb(243, 240, 240);
+  row-gap: 3em;
 }
 
 .tittle {
@@ -123,7 +124,7 @@ h1 {
 h2 {
   padding-top: 50px;
   text-align: center;
-  overflow: hidden;
+  max-width: 400px;
 }
 
 .long-copy {
@@ -142,7 +143,7 @@ h2 {
 h2:after {
   display: block;
   content: '';
-  border-bottom: 2px solid #bf2821;
+  border-bottom: 2px solid #c23730;
   padding-top: 35px;
 }
 
@@ -167,13 +168,31 @@ h2:after {
   text-align: center;
 }
 
-.box {
-  background-color: azure;
-  border: 2px solid #000;
-  text-align: center;
+.copy2 {
+  font-size: 110%;
 }
-.kit {
+
+.box {
+  background-color: #e7f8f9;
+  border: 2px solid #ccf0f2;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.box p {
+  text-align: center;
+  padding: 5px 30px;
+}
+
+.kit-name {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 110%;
+}
+
+.kit-img {
   width: 300px;
+  padding-top: 10px;
 }
 .grid {
   display: grid;
@@ -184,8 +203,10 @@ h2:after {
     '. sub-tittle .'
     'box1 box2 box3'
     'box1 box2 box3';
-  gap: 1em;
-  text-align: center;
+  column-gap: 1em;
+  row-gap: 2em;
+  justify-items: center;
+  margin: 0 20px;
 }
 
 .tittle2 {
@@ -204,4 +225,17 @@ h2:after {
 }
 .box-3 {
   grid-area: box3;
+}
+
+@media (max-width: 930px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      'tittle'
+      'sub-tittle'
+      'box1'
+      'box2'
+      'box3';
+  }
 }

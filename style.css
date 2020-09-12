@@ -29,6 +29,12 @@ h1 {
   font-family: 'Nunito', 'Arial', sans-serif;
 }
 
+h2 {
+  padding-top: 50px;
+  text-align: center;
+  max-width: 400px;
+}
+
 @media (max-width: 1000px) {
   h1 {
     width: 400px;
@@ -122,12 +128,6 @@ h1 {
   display: flex;
 }
 
-h2 {
-  padding-top: 60px;
-  text-align: center;
-  max-width: 400px;
-}
-
 .long-copy {
   grid-column: 2/3;
   grid-row: 2/3;
@@ -208,6 +208,7 @@ h2:after {
   row-gap: 2em;
   justify-items: center;
   margin: 0 20px;
+  margin-bottom: 40px;
 }
 
 .tittle2 {
@@ -243,9 +244,81 @@ h2:after {
 
 /* CONTACT US */
 
-#contact-img {
-  display: block;
+#contact-us {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/dragos-gontariu-lUHlmmBw5lo-unsplash.jpg);
+  min-height: 100vh;
   width: 100vw;
-  height: 460px;
-  margin-top: 40px;
+  background-position: center;
+  background-size: cover;
+  color: rgb(243, 240, 240);
+  text-align: center;
+}
+
+#contact-us h2 {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 150px;
+}
+#contact-us p {
+  font-size: 110%;
+  margin: 0 auto 5px auto;
+  max-width: 50%;
+}
+
+/* FORM */
+
+form {
+  margin: 30px 0 0 50px;
+  line-height: 2em;
+  width: 40%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#name,
+#email,
+#message-box {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  height: 35px;
+  border: none;
+}
+*:focus {
+  outline: none;
+}
+.input-focus {
+  border: 2px solid #dddddd;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  background-color: #eeeeee;
+  transition: background-color 0.25s, border-color 0.25s;
+  -webkit-transition: background-color 0.25s, border-color 0.25s;
+  -moz-transition: background-color 0.25s, border-color 0.25s;
+  -ms-transition: background-color 0.25s, border-color 0.25s;
+  -o-transition: background-color 0.25s, border-color 0.25s;
+}
+.input-focus:focus {
+  background-color: #ffffff;
+}
+
+#message-box {
+  text-align: left;
+  height: 170px;
+  resize: none;
+}
+@media (max-width: 758px) {
+  #contact-copy {
+    display: flex;
+    align-content: space-between;
+    width: 100%;
+  }
 }

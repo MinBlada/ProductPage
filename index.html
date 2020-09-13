@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/ionicons-2.0.1/css/ionicons.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
       rel="stylesheet"
@@ -16,13 +21,15 @@
   </head>
   <body>
     <header id="header">
-      <img src="img/IMG_3897.jpeg" alt="logo" id="header-img" />
+      <img src="css/img/IMG_3897.jpeg" alt="logo" id="header-img" />
       <div class="header-bar">
+        <a class="mobile-nav-icon js--nav-icon"
+          ><i class="ion-navicon-round"></i
+        ></a>
         <nav id="nav-bar">
           <ul>
             <li><a href="#section-features" class="nav-link">Features</a></li>
-            <li><a href="#works" class="nav-link">How it works</a></li>
-            <li><a href="#pricing" class="nav-link">Pricing</a></li>
+            <li><a href="#shop" class="nav-link">Shop</a></li>
             <li><a href="#contact-us" class="nav-link">Contact Us</a></li>
           </ul>
         </nav>
@@ -33,7 +40,7 @@
       <div class="tittle">
         <h2>Did you know?</h2>
       </div>
-      <div class="long-copy">
+      <div class="copy">
         <p>
           Research shows that it will take over 500 years for a disposable nappy
           to degrade. That means, that every single used disposable nappy is
@@ -44,13 +51,13 @@
         <iframe
           id="video"
           src="https://www.youtube.com/embed/GyWtoI-VQbw?vq=hd1080&loop=1&showinfo=0&rel=0&cc_load_policy=1"
-          width="550"
+          width="600"
           height="350"
           frameborder="0"
         ></iframe>
       </div>
     </section>
-    <section id="works">
+    <section id="shop">
       <div class="grid">
         <div class="tittle2">
           <h2>New to washable Nappies?</h2>
@@ -60,7 +67,7 @@
         </div>
         <div class="box-1 box">
           <div class="kit-name">Standard Nappy Kit</div>
-          <img src="img/images2.jpg" alt="nappy kit" class="kit-img" />
+          <img src="css/img/images2.jpg" alt="nappy kit" class="kit-img" />
           <p>
             This standard kit features our original nappy and wrap in a choice
             of three super soft, absorbent fabrics. A great all rounder.
@@ -78,7 +85,7 @@
         </div>
         <div class="box-2 box">
           <div class="kit-name">Premium Nappy Kit</div>
-          <img src="img/images.jpg" alt="nappy kit" class="kit-img" />
+          <img src="css/img/images.jpg" alt="nappy kit" class="kit-img" />
           <p>
             The premium kit features our sized s-t-r-e-t-c-h-y pocket nappy
             created for the perfect fit. Easy to use and fast to dry.
@@ -95,7 +102,7 @@
         </div>
         <div class="box-3 box">
           <div class="kit-name">Economy Nappy Kit</div>
-          <img src="img/images1.jpg" alt="nappy kit" class="kit-img" />
+          <img src="css/img/images1.jpg" alt="nappy kit" class="kit-img" />
           <p>
             Our economy kit is perfect for those wanting a cost effective, easy
             to use system that is a quality nappy made in Europe.
@@ -148,5 +155,11 @@
         </div>
       </form>
     </section>
+    <footer>
+      <div class="copy-right">
+        <p>Copyright &copy; 2020 by Green Start. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

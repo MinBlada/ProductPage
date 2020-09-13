@@ -116,7 +116,7 @@ h2 {
   display: grid;
   grid-template-rows: 1fr 1fr 2fr 2fr;
   grid-template-columns: 1fr 2fr 1fr;
-  height: 100vh;
+  min-height: 100vh;
   background: rgb(243, 240, 240);
   row-gap: 2em;
 }
@@ -174,8 +174,6 @@ h2:after {
 }
 
 .box {
-  background-color: #e7f8f9;
-  border: 2px solid #ccf0f2;
   text-align: center;
   padding-bottom: 10px;
 }
@@ -221,12 +219,22 @@ h2:after {
 
 .box-1 {
   grid-area: box1;
+  background-color: #f2cdcc;
+  border: 2px solid #ecb3b0;
 }
 .box-2 {
   grid-area: box2;
+  background-color: #f2e0cc;
+  border: 2px solid #ebd0b1;
 }
 .box-3 {
   grid-area: box3;
+  background-color: #e7f8f9;
+  border: 2px solid #ccf0f2;
+}
+
+.box ul li {
+  list-style: none;
 }
 
 @media (max-width: 930px) {
@@ -239,6 +247,27 @@ h2:after {
       'box1'
       'box2'
       'box3';
+  }
+  .box-1,
+  .box-2,
+  .box-3 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 770px) {
+  .box-1,
+  .box-2,
+  .box-3 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 650px) {
+  .box-1,
+  .box-2,
+  .box-3 {
+    width: 70%;
   }
 }
 
@@ -268,11 +297,11 @@ h2:after {
 
 /* FORM */
 
-form {
-  margin: 30px 0 0 50px;
+#form {
+  margin: 40px 0 0 50px;
   line-height: 2em;
   width: 40%;
-  height: 400px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -282,7 +311,8 @@ form {
 
 #name,
 #email,
-#message-box {
+#message-box,
+#submit {
   width: 100%;
   display: block;
   padding: 5px;
@@ -292,7 +322,7 @@ form {
 *:focus {
   outline: none;
 }
-.input-focus {
+.focus {
   border: 2px solid #dddddd;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -306,7 +336,7 @@ form {
   -ms-transition: background-color 0.25s, border-color 0.25s;
   -o-transition: background-color 0.25s, border-color 0.25s;
 }
-.input-focus:focus {
+.focus:focus {
   background-color: #ffffff;
 }
 
@@ -315,10 +345,47 @@ form {
   height: 170px;
   resize: none;
 }
+
+#submit {
+  cursor: pointer;
+  margin-top: 20px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  background-color: #c23730;
+  color: #e7f8f9;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  justify-self: flex-end;
+}
+
+#flex-submit {
+  width: 150px;
+  align-self: flex-end;
+}
+
+@media (max-width: 932px) {
+  #contact-us p {
+    max-width: 60%;
+  }
+}
+
 @media (max-width: 758px) {
-  #contact-copy {
-    display: flex;
-    align-content: space-between;
-    width: 100%;
+  #form {
+    width: 56%;
+  }
+}
+
+@media (max-width: 706px) {
+  #contact-us p {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 550px) {
+  #form {
+    width: 62%;
   }
 }

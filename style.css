@@ -203,7 +203,7 @@ h2:after {
     'box1 box2 box3'
     'box1 box2 box3';
   column-gap: 1em;
-  row-gap: 2em;
+  row-gap: 1em;
   justify-items: center;
   margin: 0 20px;
   margin-bottom: 40px;
@@ -215,6 +215,7 @@ h2:after {
 
 .copy2 {
   grid-area: sub-tittle;
+  padding-top: 20px;
 }
 
 .box-1 {

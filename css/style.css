@@ -248,6 +248,26 @@ h2:after {
 .box ul li {
   list-style: none;
 }
+.btn-kit {
+  height: 35px;
+  width: 80%;
+  margin: 20px 0;
+  background-color: #c23730;
+  border: 2px solid #a72f29;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.btn-kit-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #e7f8f9;
+  font-weight: 400;
+}
 
 @media (max-width: 1170px) {
   .box {
@@ -365,6 +385,7 @@ h2:after {
   border-radius: 4px;
   font-weight: 400;
   background-color: #c23730;
+  border: 2px solid #a72f29;
   color: #e7f8f9;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;

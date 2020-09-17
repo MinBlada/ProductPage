@@ -37,24 +37,43 @@
       <h1>Healthy babies,<br />Healthy world.</h1>
     </header>
     <section id="section-features">
-      <div class="tittle">
-        <h2>Did you know?</h2>
+      <div id="flex-feat">
+        <div class="tittle">
+          <h2>Did you know?</h2>
+        </div>
+        <div class="copy">
+          <p>
+            Research shows that it will take over 500 years for a disposable
+            nappy to degrade. That means, that every single used disposable
+            nappy is still sat in landfill.
+          </p>
+        </div>
       </div>
-      <div class="copy">
-        <p>
-          Research shows that it will take over 500 years for a disposable nappy
-          to degrade. That means, that every single used disposable nappy is
-          still sat in landfill.
-        </p>
-      </div>
-      <div class="video">
-        <iframe
-          id="video"
-          src="https://www.youtube.com/embed/GyWtoI-VQbw?vq=hd1080&loop=1&showinfo=0&rel=0&cc_load_policy=1"
-          width="600"
-          height="350"
-          frameborder="0"
-        ></iframe>
+      <div id="grid-feat">
+        <div class="features feat-1">
+          <i class="ion-leaf"></i>
+          <p>
+            Our nappies are made of 100% organic cotton. Good for your baby,
+            respect our world.
+          </p>
+        </div>
+        <div class="features feat-2">
+          <i class="ion-social-euro"></i>
+          <p>Save money, more affordable in the long run.</p>
+        </div>
+        <div class="features feat-3">
+          <i class="ion-happy"></i>
+          <p>Our nappies are designed for the best comfort of your baby</p>
+        </div>
+        <div class="video-box">
+          <iframe
+            id="video"
+            src="https://www.youtube.com/embed/GyWtoI-VQbw?vq=hd1080&loop=1&showinfo=0&rel=0&cc_load_policy=1"
+            width="500"
+            height="350"
+            frameborder="0"
+          ></iframe>
+        </div>
       </div>
     </section>
     <section id="shop">
@@ -133,7 +152,7 @@
         If you have any questions relating to an item, an order or general
         advice on our Green Start products, please use the contact form below.
       </p>
-      <form action="" id="form">
+      <form action="https://www.freecodecamp.com/email-submit" id="form">
         <label for="name"
           >Name
           <input
@@ -141,6 +160,7 @@
             id="name"
             placeholder="Enter your name"
             class="focus"
+            required
         /></label>
         <label for="email"
           >Email
@@ -149,6 +169,7 @@
             id="email"
             placeholder="Enter your email"
             class="focus"
+            required
         /></label>
         <label for="message"
           >How could we assist you?
@@ -169,6 +190,6 @@
         <p>Copyright &copy; 2020 by Green Start. All rights reserved.</p>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

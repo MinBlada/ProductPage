@@ -30,6 +30,7 @@ h1 {
 }
 
 h2 {
+  color: #12878d;
   padding-top: 50px;
   text-align: center;
   max-width: 400px;
@@ -125,31 +126,9 @@ h2 {
 
 /* SECTION FEATURES */
 #section-features {
-  display: grid;
-  grid-template-rows: 1fr 1fr 2fr;
-  grid-template-columns: 1fr 2fr 1fr;
-  height: auto;
   background-color: rgb(243, 240, 240);
-}
-
-.tittle {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  justify-self: center;
-  display: flex;
-}
-
-.copy {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  justify-self: center;
-  display: flex;
-  padding: 0 15%;
-}
-
-.copy p {
-  align-self: center;
-  font-size: 110%;
+  min-height: 100vh;
+  width: 100%;
 }
 
 h2:after {
@@ -159,15 +138,106 @@ h2:after {
   padding-top: 35px;
 }
 
-.video {
-  grid-column: 2/3;
-  grid-row: 3/4;
-  justify-self: center;
+#flex-feat {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copy {
+  width: 60%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.copy p {
+  font-size: 110%;
+}
+
+#grid-feat {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.feat-1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.feat-2 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.feat-3 {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+.video-box {
+  grid-row: 1/4;
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  margin-right: 100px;
+  padding: 0 50px;
 }
 
 #video {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  #section-features {
+    height: fit-content;
+  }
+  #grid-feat {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr;
+    gap: 30px;
+  }
+  .feat-1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .feat-2 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .feat-3 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  .video-box {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    margin: 20px 50px 60px 50px;
+  }
+}
+
+.features {
+  width: 74%;
+  display: flex;
+  flex-direction: row;
   align-self: center;
+}
+
+.features p {
+  font-weight: 400;
+}
+
+.features i {
+  color: #c23730;
+  font-size: 260%;
+  padding-right: 20px;
+}
+
+.feat-2 i {
+  font-size: 290%;
 }
 
 /* SECTION SHOP */
@@ -185,6 +255,14 @@ h2:after {
   padding-bottom: 10px;
 }
 
+.box:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
 .box p {
   text-align: center;
   padding: 5px 30px;
@@ -194,6 +272,7 @@ h2:after {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 110%;
+  padding-top: 5px;
 }
 
 .kit-img {
